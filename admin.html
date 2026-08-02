@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CCNHS Admin Portal</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+
+    <div class="background">
+
+        <div class="circle circle1"></div>
+
+        <div class="circle circle2"></div>
+
+        <div class="circle circle3"></div>
+
+    </div>
+
+    <!-- Login Container -->
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <!-- Logo -->
+
+            <div class="logo">
+
+                <img src="assets/logo.png"
+                     alt="CCNHS Logo">
+
+            </div>
+
+            <!-- Heading -->
+
+            <h1>
+
+                Admin Portal
+
+            </h1>
+
+            <p>
+
+                CCNHS Concern Mo,
+                Action Namin!
+
+            </p>
+
+            <!-- Login Form -->
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label>
+
+                        Email Address
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your admin email"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+
+                        Password
+
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required>
+
+                </div>
+
+                <!-- Show Password -->
+
+                <div class="show-password">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="showPassword">
+
+                        Show Password
+
+                    </label>
+
+                </div>
+
+                <!-- Remember Me -->
+
+                <div class="login-options">
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe">
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="#"
+                       id="forgotPassword">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+                <!-- Error Message -->
+
+                <div
+                    id="loginError"
+                    class="error-message">
+
+                </div>
+
+                <!-- Login Button -->
+
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="login-btn">
+
+                    Login
+
+                </button>
+
+                <!-- Loading -->
+
+                <div
+                    id="loadingSpinner"
+                    class="loading"
+                    style="display:none;">
+
+                    <div class="spinner"></div>
+
+                    <p>
+
+                        Signing in...
+
+                    </p>
+
+                </div>
+
+            </form>
+
+            <!-- Divider -->
+
+            <div class="divider">
+
+                <span>
+
+                    Authorized Personnel Only
+
+                </span>
+
+            </div>
+
+            <!-- Notice -->
+
+            <div class="notice">
+
+                <p>
+
+                    This portal is intended only for
+                    authorized CCNHS administrators,
+                    SSLG officers, Guidance personnel,
+                    and the Aid and Welfare Committee.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+            <!-- Footer -->
+
+            <div class="login-footer">
+
+                <p>
+
+                    © 2026–2027
+
+                    CCNHS Supreme Secondary Learner Government
+
+                </p>
+
+                <p>
+
+                    Concern Mo, Action Namin!
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Firebase Authentication -->
+
+    <script type="module" src="firebase.js"></script>
+
+    <!-- Authentication -->
+
+    <script type="module" src="auth.js"></script>
+
+    <!-- Show / Hide Password -->
+
+    <script>
+
+        const password =
+            document.getElementById("password");
+
+        const showPassword =
+            document.getElementById("showPassword");
+
+        showPassword.addEventListener("change",()=>{
+
+            if(showPassword.checked){
+
+                password.type="text";
+
+            }else{
+
+                password.type="password";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

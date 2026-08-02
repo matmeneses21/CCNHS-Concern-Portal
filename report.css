@@ -1,0 +1,324 @@
+/* ==========================
+   Report Page Styling
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+
+/* ==========================
+   Navigation Bar
+========================== */
+
+.report-navbar {
+    width: 100%;
+    background: #0b3d91;
+    color: white;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo small {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+
+.back-btn {
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,0.15);
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: white;
+    color: #0b3d91;
+}
+
+
+/* ==========================
+   Main Container
+========================== */
+
+.report-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* ==========================
+   Header
+========================== */
+
+.report-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.report-header h1 {
+    font-size: 35px;
+    color: #0b3d91;
+}
+
+.report-header p {
+    color: #666;
+    margin-top: 8px;
+}
+
+
+/* ==========================
+   Report Cards
+========================== */
+
+.report-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+.report-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #0b3d91;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+
+/* ==========================
+   Information Grid
+========================== */
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+
+.info-box {
+    background: #f8faff;
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 5px solid #0b3d91;
+}
+
+
+.info-box label {
+    font-size: 13px;
+    color: #777;
+    font-weight: 600;
+}
+
+
+.info-box p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* ==========================
+   Status & Priority
+========================== */
+
+.priority,
+.status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.priority.high {
+    background: #ffe5e5;
+    color: #d00000;
+}
+
+
+.status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+
+/* ==========================
+   Description
+========================== */
+
+.description-box {
+    margin-top: 25px;
+}
+
+
+.description-box label {
+    font-weight: 600;
+    color: #555;
+}
+
+
+.description {
+    margin-top: 10px;
+    background: #f8faff;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+
+/* ==========================
+   Attachment
+========================== */
+
+.attachment-container {
+    text-align: center;
+}
+
+
+#attachmentImage {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+.no-attachment {
+    padding: 40px;
+    color: #777;
+}
+
+
+.no-attachment i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #0b3d91;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+
+/* ==========================
+   Admin Actions
+========================== */
+
+.action-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.action-btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+
+.resolve {
+    background: #28a745;
+}
+
+.delete {
+    background: #dc3545;
+}
+
+.print {
+    background: #6c757d;
+}
+
+.back {
+    background: #0b3d91;
+}
+
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+
+/* ==========================
+   Responsive Design
+========================== */
+
+@media(max-width:768px){
+
+    .report-navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    .report-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .action-container {
+        flex-direction: column;
+    }
+
+
+    .action-btn {
+        justify-content: center;
+    }
+
+}

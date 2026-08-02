@@ -1,0 +1,38 @@
+rules_version = '2';
+
+service cloud.firestore {
+
+  match /databases/{database}/documents {
+
+    // ===============================
+    // Student Reports Collection
+    // ===============================
+
+    match /reports/{reportId} {
+
+      // Anyone can submit a report
+      allow create: if true;
+
+      // Only authenticated admins
+      // can view reports
+      allow read: if request.auth != null;
+
+      // Only authenticated admins
+      // can update reports
+      allow update: if request.auth != null;
+
+      // Only authenticated admins
+      // can delete reports
+      allow delete: if request.auth != null;
+    }
+
+    // Deny everything else
+    match /{document=**} {
+
+      allow read, write: if false;
+
+    }
+
+  }
+
+}

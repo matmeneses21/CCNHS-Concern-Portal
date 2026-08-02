@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CCNHS Report Details</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="dashboard.css">
+
+    <link rel="stylesheet"
+          href="report.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+     Navigation
+========================== -->
+
+<header class="report-navbar">
+
+    <div class="logo">
+
+        <img src="assets/logo.png"
+             alt="CCNHS Logo">
+
+        <div>
+
+            <h2>
+
+                CCNHS Concern System
+
+            </h2>
+
+            <small>
+
+                Report Details
+
+            </small>
+
+        </div>
+
+    </div>
+
+    <a href="dashboard.html"
+       class="back-btn">
+
+        <i class="fas fa-arrow-left"></i>
+
+        Back to Dashboard
+
+    </a>
+
+</header>
+
+<!-- ==========================
+     Main Container
+========================== -->
+
+<div class="report-container">
+
+    <!-- Report Header -->
+
+    <section class="report-header">
+
+        <h1>
+
+            Student Concern Report
+
+        </h1>
+
+        <p>
+
+            Review the complete details
+            of the submitted concern.
+
+        </p>
+
+    </section>
+
+    <!-- ==========================
+         Student Information
+    ========================== -->
+
+    <section class="report-card">
+
+        <h2>
+
+            <i class="fas fa-user"></i>
+
+            Student Information
+
+        </h2>
+
+        <div class="report-grid">
+
+            <div class="info-box">
+
+                <label>
+
+                    Student Name
+
+                </label>
+
+                <p id="studentName">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <label>
+
+                    Grade & Section
+
+                </label>
+
+                <p id="studentSection">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <label>
+
+                    Email Address
+
+                </label>
+
+                <p id="studentEmail">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <label>
+
+                    Contact Number
+
+                </label>
+
+                <p id="studentPhone">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Concern Details
+    ========================== -->
+
+    <section class="report-card">
+
+        <h2>
+
+            <i class="fas fa-file-alt"></i>
+
+            Concern Details
+
+        </h2>
+
+        <div class="report-grid">
+
+            <div class="info-box">
+
+                <label>
+
+                    Concern Category
+
+                </label>
+
+                <p id="reportCategory">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <label>
+
+                    Priority Level
+
+                </label>
+
+                <span
+                    id="reportPriority"
+                    class="priority high">
+
+                    Loading...
+
+                </span>
+
+            </div>
+
+            <div class="info-box">
+
+                <label>
+
+                    Current Status
+
+                </label>
+
+                <span
+                    id="reportStatus"
+                    class="status pending">
+
+                    Loading...
+
+                </span>
+
+            </div>
+
+            <div class="info-box">
+
+                <label>
+
+                    Date Submitted
+
+                </label>
+
+                <p id="reportDate">
+
+                    Loading...
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Concern Description -->
+
+        <div class="description-box">
+
+            <label>
+
+                Description of the Concern
+
+            </label>
+
+            <div
+                id="reportDescription"
+                class="description">
+
+                Loading report details...
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Evidence / Attachment
+    ========================== -->
+
+    <section class="report-card">
+
+        <h2>
+
+            <i class="fas fa-paperclip"></i>
+
+            Evidence / Attachment
+
+        </h2>
+
+        <div class="attachment-container">
+
+            <img
+
+                id="attachmentImage"
+
+                src=""
+
+                alt="Attachment Preview"
+
+                style="display:none;">
+
+            <iframe
+
+                id="attachmentPDF"
+
+                style="display:none;"
+
+                width="100%"
+
+                height="600">
+
+            </iframe>
+
+            <div
+                id="noAttachment"
+                class="no-attachment">
+
+                <i class="fas fa-image"></i>
+
+                <p>
+
+                    No attachment uploaded.
+
+                </p>
+
+            </div>
+
+            <a
+
+                id="downloadAttachment"
+
+                href="#"
+
+                target="_blank"
+
+                class="download-btn"
+
+                style="display:none;">
+
+                <i class="fas fa-download"></i>
+
+                Download Attachment
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Admin Actions
+    ========================== -->
+
+    <section class="report-card">
+
+        <h2>
+
+            <i class="fas fa-gear"></i>
+
+            Administrator Actions
+
+        </h2>
+
+        <div class="action-container">
+
+            <button
+                id="resolveBtn"
+                class="action-btn resolve">
+
+                <i class="fas fa-check-circle"></i>
+
+                Mark as Resolved
+
+            </button>
+
+            <button
+                id="deleteBtn"
+                class="action-btn delete">
+
+                <i class="fas fa-trash"></i>
+
+                Delete Report
+
+            </button>
+
+            <button
+                id="printBtn"
+                class="action-btn print">
+
+                <i class="fas fa-print"></i>
+
+                Print Report
+
+            </button>
+
+            <a
+                href="dashboard.html"
+                class="action-btn back">
+
+                <i class="fas fa-arrow-left"></i>
+
+                Back to Dashboard
+
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- ==========================================
+     Firebase & JavaScript
+========================================== -->
+
+<script type="module" src="firebase.js"></script>
+
+<script type="module" src="reports.js"></script>
+
+<script type="module" src="auth.js"></script>
+
+</body>
+
+</html>
